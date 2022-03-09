@@ -1,6 +1,8 @@
 # Raspberry Pi Ansible demo
 
-A simple demo Ansible project as a starting point to configure your Raspberry PI  
+A simple demo Ansible project as a starting point to configure your Raspberry PI.
+
+Run the playbook with: `ansible-playbook playbook.yml -i ansible_hosts`
 
 ## Folder Structure
 
@@ -39,7 +41,7 @@ A simple demo Ansible project as a starting point to configure your Raspberry PI
     - Template gets copied and replaced
     - Tools get installed
     - Tools get uninstalled
-    - Variables get replaced (show 2 versions of this) - `ansible-playbook playbook.yml -i ansible_hosts --extra-vars "destination_directory=/another_project application_name: an even greater app"`
+    - Variables get replaced (show 2 versions of this) - `ansible-playbook playbook.yml -i ansible_hosts --extra-vars "destination_directory=another_project application_name: an even greater app"`
     - Disable Cowsay (for the boring people) with: export ANSIBLE_NOCOWS=1 (enable with 0)
     - Testing and Verbose output with -v
 

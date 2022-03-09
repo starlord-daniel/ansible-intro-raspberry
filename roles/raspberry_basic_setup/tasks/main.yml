@@ -10,11 +10,11 @@
 - name: Copy template file to destination and replace vars
   ansible.builtin.template:
     src: "{{ file_src_path }}"
-    dest: "{{ destination_directory }}/{{ file_dest_name }}"
+    dest: "/{{ destination_directory }}/{{ file_dest_name }}"
 
 - name: check if the files exists in specified location
   stat:
-    path: "{{ destination_directory }}/{{ file_dest_name }}"
+    path: "/{{ destination_directory }}/{{ file_dest_name }}"
   register: file
 
 - assert:

@@ -1,5 +1,5 @@
 ---
 application_name: "a really great application"
 file_src_path: "roles/raspberry_basic_setup/templates/README.j2"
-destination_directory: "/project"
+destination_directory: "project"
 file_dest_name: "README.md"
