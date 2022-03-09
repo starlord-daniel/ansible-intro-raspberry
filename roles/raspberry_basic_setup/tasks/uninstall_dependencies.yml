@@ -1,0 +1,6 @@
+- name: Sadly uninstall the great and necessary tools
+  apt:
+    pkg:
+    - cmatrix
+    - sl
+    state: absent

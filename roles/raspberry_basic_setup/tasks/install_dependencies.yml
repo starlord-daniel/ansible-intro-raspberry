@@ -1,0 +1,6 @@
+- name: Install some great and necessary tools
+  apt:
+    pkg:
+    - cmatrix
+    - sl
+    state: present

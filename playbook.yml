@@ -1,0 +1,9 @@
+- name: Configure Raspberry Pi
+  hosts: all
+  remote_user: pi
+  become: true
+  become_user: root
+  roles:
+    - raspberry_basic_setup
+  vars_files:
+    - roles/raspberry_basic_setup/vars/main.yml

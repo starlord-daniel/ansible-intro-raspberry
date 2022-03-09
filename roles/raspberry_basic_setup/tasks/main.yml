@@ -1,0 +1,23 @@
+---
+# tasks file for raspberry_basic_setup
+- include_tasks: install_dependencies.yml
+
+- name: create application directory
+  file:
+    path: "{{ destination_directory }}"
+    state: directory
+
+- name: Copy template file to destination and replace vars
+  ansible.builtin.template:
+    src: "{{ file_src_path }}"
+    dest: "{{ destination_directory }}/{{ file_dest_name }}"
+
+- name: check if the files exists in specified location
+  stat:
+    path: "{{ destination_directory }}/{{ file_dest_name }}"
+  register: file
+
+- assert:
+    that:
+      - file.stat.exists
+    fail_msg: "file was not successfully copied"
